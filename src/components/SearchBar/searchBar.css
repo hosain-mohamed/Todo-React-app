@@ -1,0 +1,45 @@
+.todo-input {
+  border: 1px solid #3a3a3a;
+  background-color: #12121277;
+  color: #ffffff;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  color: #ffffffd8;
+  text-transform: capitalize;
+}
+
+.todo-input:focus {
+  outline: none;
+  border: 2px solid #3a3a3a;
+}
+
+.input-container {
+  margin-top: 50px;
+}
+
+.input-container::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: #ffffff;
+  pointer-events: none;
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 0.2;
+  transform: translateY(-50%);
+  /* Adjust to match input text size */
+}
+
+.todo-input::placeholder {
+  color: #ffffff;
+  opacity: 0.2;
+  font-size: 15px;
+}
+
+.light-color {
+  color: #ffffff;
+  opacity: 0.2;
+}

@@ -1,0 +1,21 @@
+.todo-list-header .title {
+  font-size: 16px;
+}
+
+.todo-list-header .count {
+  font-size: 14px;
+}
+
+.hr-class {
+  background-color: white;
+  opacity: 0.1;
+}
+
+.list-item {
+  opacity: 0.9;
+}
+
+.list-item i,
+.list-item h6 {
+  cursor: pointer;
+}

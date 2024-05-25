@@ -13,6 +13,8 @@
 
 .list-item {
   opacity: 0.9;
+  text-transform: capitalize;
+
 }
 
 .list-item i,

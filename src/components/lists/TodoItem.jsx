@@ -15,7 +15,10 @@ const TodoItem = ({ item }) => {
 
   return (
     <div className="list-item d-flex mb-3 justify-content-between align-items-center">
-      <div className="d-flex ">
+      <div
+        className="d-flex align-items-center w-100 "
+        style={{ wordBreak: "break-all", overflowWrap: "break-word" }}
+      >
         <div onClick={() => toggleItem(item)}>
           {item.compeleted ? (
             <i className="fa-regular fa-circle-check fs-5"></i>

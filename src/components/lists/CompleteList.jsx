@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import ListHeader from "./ListHeader";
 import GroupList from "./GroupList";
-import { TodoListContext } from "../../context/TodoListContext";
+import { useSelector } from "react-redux";
 
 const CompleteList = () => {
-  const { allItems } = useContext(TodoListContext);
+  const allItems = useSelector((state) => state.allItems);
   const completedItems = allItems.filter((item) => item.compeleted);
   if (completedItems.length === 0) {
     return <div></div>;

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import "./list.css";
-import { TodoListContext } from "../../context/TodoListContext";
+import { useDispatch } from "react-redux";
 
 const TodoItem = ({ item }) => {
-  const { dispatch } = useContext(TodoListContext);
+  const dispatch = useDispatch();
   function removeItem(item) {
     dispatch({ type: "REMOVE", id: item.id });
   }

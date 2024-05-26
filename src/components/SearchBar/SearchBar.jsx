@@ -1,8 +1,12 @@
 import React, { useContext } from "react";
 import "./searchBar.css";
 import { TodoListContext } from "../../context/TodoListContext";
+import { useDispatch, useSelector } from "react-redux";
 const SearchBar = () => {
-  const { allItems, dispatch } = useContext(TodoListContext);
+  const dispatch = useDispatch();
+  const allItems = useSelector((state) => state.allItems);
+  console.log(allItems);
+  // const { allItems, dispatch } = useContext(TodoListContext);
 
   const addItem = (e) => {
     // check if input is not empty

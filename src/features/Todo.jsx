@@ -5,7 +5,7 @@ import TodoList from "../components/lists/TodoList";
 import "../styles/searchPage.css";
 import CompleteList from "../components/lists/CompleteList";
 
-const Search = () => {
+const Todo = () => {
   return (
     <div className="search-page p-5">
       <Container>
@@ -23,4 +23,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Todo;

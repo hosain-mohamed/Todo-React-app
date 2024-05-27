@@ -1,16 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./searchBar.css";
-import { TodoListContext } from "../../context/TodoListContext";
 import { useDispatch, useSelector } from "react-redux";
+import { selectAllTodos, addTodo } from "../../features/todoSlicer";
+
 const SearchBar = () => {
   const dispatch = useDispatch();
-  const allItems = useSelector((state) => state.allItems);
-  console.log(allItems);
-  // const { allItems, dispatch } = useContext(TodoListContext);
+  const allItems = useSelector(selectAllTodos);
 
   const addItem = (e) => {
-    // check if input is not empty
-
     if (e.key === "Enter") {
       if (e.target.value.trim() === "") {
         e.target.setCustomValidity("Please add a Todo");
@@ -18,14 +15,8 @@ const SearchBar = () => {
       }
       e.preventDefault();
       const id = allItems.length + 1;
-      dispatch({
-        type: "ADD",
-        item: {
-          id: id,
-          value: e.target.value,
-          compeleted: false,
-        },
-      });
+      console.log(e.target.value);
+      dispatch(addTodo({ id, value: e.target.value, compeleted: false }));
       e.target.value = "";
     }
   };

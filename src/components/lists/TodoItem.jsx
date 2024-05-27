@@ -2,15 +2,17 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import "./list.css";
 import { useDispatch } from "react-redux";
+import { toggleTodo, removeTodo } from "../../features/todoSlicer";
 
 const TodoItem = ({ item }) => {
   const dispatch = useDispatch();
   function removeItem(item) {
-    dispatch({ type: "REMOVE", id: item.id });
+    console.log(item.id);
+    dispatch(removeTodo(item.id));
   }
 
   function toggleItem(item) {
-    dispatch({ type: "TOGGLE", id: item.id });
+    dispatch(toggleTodo(item.id));
   }
 
   return (
